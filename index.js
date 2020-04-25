@@ -35,9 +35,10 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(x) {
+  return ('Goodbye, '+ x +'. Have a great day.')
 }
+console.log(sayGoodbye('Andy'));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -53,10 +54,11 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
-}
-
+function temperatureCtoF(t) {
+  let newtemp = (t * 9/5 + 32);
+  return Math.round(newtemp)
+ }
+ 
 /**
  * ### Challenge `temperatureInF`
  * 
@@ -74,11 +76,15 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
-}
-
-
+function temperatureInF(t, u) {
+  if (u === 'F') {
+    return Math.round(t)+ 'F';
+  }
+  else if (u === 'C'){
+    return Math.round(t * 9/5 + 32) + 'F';
+  }
+} 
+console.log(temperatureInF(10,'C'));
 /**
  * ### Challenge `makePersonObject`
  * 
@@ -95,8 +101,12 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  return {
+    id: id,
+    name: name,
+    email: email,
+  }
 }
 
 /**
@@ -111,10 +121,18 @@ function makePersonObject(/* code here */) {
  * For example, if we invoke `getName`
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
+ *
 */
-function getName(/* code here */) {
-  /* code here */
+
+const myNames = {
+  name: 'Jay',
+  id: 5,
+  email: 'Randomnam.gmail',
 }
+function getName( myNames) {
+  let newName = myNames.name;
+  return 'Helle, my name is ' + newName;
+};
 
 
 /**
@@ -132,7 +150,8 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
+const appArray = [ 'orange', 'bannana', 'apple', 'mango' ]
+function appleIndex(appArray) {
   /* code here */
 }
 
