@@ -150,10 +150,11 @@ function getName( myNames) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-const appArray = [ 'orange', 'bannana', 'apple', 'mango' ]
+const appArray = ["orange","apple", "bannana", "mango"];
 function appleIndex(appArray) {
-  /* code here */
+  return appArray.lastIndexOf("apple");
 }
+console.log(appleIndex(appArray))
 
 /**
  * ### Challenge `isItAnApple`
@@ -170,8 +171,9 @@ function appleIndex(appArray) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+const fruitString = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ];
+function isItAnApple(fruitString) {
+  
 }
 
 
@@ -228,8 +230,9 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+const inventory = ['Lincoln', 'Mercedes', 'Hummer' ]
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  index =   
 }
 
 /**
