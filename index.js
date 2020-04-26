@@ -171,13 +171,16 @@ console.log(appleIndex(appArray))
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-const fruitString = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ];
-function isItAnApple(fruitString) {
-  
-}
-
-
-
+const fruitString = ["orange", "apple", "banana", "apples", "apple", "mango"];
+function isItAnApple(fruitString){
+for (var index = 0; index < fruitString.length; index++) {
+  if (fruitString[index] === "apple") {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}}
+isItAnApple(fruitString);
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -231,9 +234,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 const inventory = ['Lincoln', 'Mercedes', 'Hummer' ]
-function getCarInfoByIndex(inventory, index) {
-  index =   
-}
+function getCarInfoByIndex(inventory, index) {}
 
 /**
  * ### Challenge `getLastCarInfo`
